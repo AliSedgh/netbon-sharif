@@ -1,0 +1,133 @@
+.cards-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.card{
+    background-color: var(--card-background-color);
+    padding: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.card-type-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: start;
+
+}
+
+.total-card-type{
+
+    width: 70px;
+    height: 80px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+   
+   
+}
+
+.top-card-type{
+    width: 100%;
+    flex-grow: 1;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.top-card-type.domain{
+    background-color: #DF6710;
+}
+.top-card-type.ip{
+    background-color: #565392;
+}
+.top-card-type.cloud{
+    background-color: #D1B003;
+}
+
+
+
+.bottom-card-type{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: white;
+    text-align: center;
+    color: black;
+
+
+}
+
+.card-type-text{
+    margin-top: 20px;
+
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+.card-type-wrapper{
+    border-bottom: 1px solid #FFFFFF;
+    padding-bottom: 5px;
+}
+.live-card-display{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #FFFFFF;
+    gap: 2px;
+   
+
+}
+.live-section{
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 5px;
+}
+.live-section div{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1px;
+}
+
+.network-card-metrics{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+.network-card-metrics-section{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+
+}
+.network-card-metrics-section .image{
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #327794;
+} 
+.network-card-metrics-section .data{
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media screen and (max-width: 768px) {
+   .cards-grid{
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+}
