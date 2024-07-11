@@ -1,4 +1,4 @@
-type Asset = {
+type TAsset = {
   grade: string;
   lastSeen: number;
   name: string;
@@ -6,7 +6,7 @@ type Asset = {
   type: string;
 };
 
-type Cloud = {
+type TNetworkMetrics = {
   ips: number;
   live: number[];
   monitored: number[];
@@ -17,13 +17,13 @@ type Cloud = {
   vulns: number;
 };
 
-type GeneralType = "domain" | "ip" | "cloud";
+type TGeneralType = "domain" | "ip" | "cloud";
 
-type Data = {
-  assets: Asset[];
-  cloud: Cloud;
-  domain: Cloud;
-  ip: Cloud;
+type TData = {
+  assets: TAsset[];
+  cloud: TNetworkMetrics;
+  domain: TNetworkMetrics;
+  ip: TNetworkMetrics;
 };
 
-export type { Cloud, Data, Asset, GeneralType };
+export type { TNetworkMetrics, TData, TAsset, TGeneralType };

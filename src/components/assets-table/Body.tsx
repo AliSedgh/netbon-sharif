@@ -1,9 +1,9 @@
-import { Asset } from "../types";
+import { TAsset } from "../types";
 import RowContainer from "./RowContainer";
 import TableRow from "./TableRow";
 
 interface BodyProps {
-  tableData: Asset[];
+  tableData: TAsset[];
 }
 
 const Body: React.FC<BodyProps> = ({ tableData }) => {

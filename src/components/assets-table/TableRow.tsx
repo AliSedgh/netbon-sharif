@@ -1,8 +1,8 @@
 import formatUnixTimestamp from "../../utils/formatDate";
-import { Asset } from "../types";
+import { TAsset } from "../types";
 
 interface TableRowProps {
-  asset: Asset;
+  asset: TAsset;
 }
 const TableRow: React.FC<TableRowProps> = ({ asset }) => {
   return (

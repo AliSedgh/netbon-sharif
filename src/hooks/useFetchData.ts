@@ -1,29 +1,29 @@
-import { useQuery, QueryKey } from "@tanstack/react-query";
-import { Data, Asset } from "../components/types";
+import { useQuery } from "@tanstack/react-query";
+import { TData, TAsset } from "../components/types";
 import { useSearchParams } from "react-router-dom";
 import { fetchDashboardData } from "../services/fetchDashboardData";
 import { useMemo } from "react";
 
 const useFilteredData = (
-  data: Data | undefined,
+  data: TData | undefined,
   type: string | null
-): Data | undefined => {
+): TData | undefined => {
   return useMemo(() => {
     if (data && type) {
-      const assets = data.assets.filter((asset: Asset) => asset.type === type);
+      const assets = data.assets.filter((asset: TAsset) => asset.type === type);
       return { ...data, assets };
     }
     return data;
   }, [data, type]);
 };
 
-const useFetchData = (): { data: Data | undefined } => {
+const useFetchData = (): { data: TData | undefined } => {
   const [searchParams] = useSearchParams();
   const type = searchParams.get("type");
 
   const { data } = useQuery({
     queryKey: ["dashboard"],
-    queryFn: fetchDashboardData<Data>,
+    queryFn: fetchDashboardData<TData>,
   });
 
   const filteredData = useFilteredData(data, type);

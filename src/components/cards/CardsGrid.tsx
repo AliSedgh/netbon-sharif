@@ -1,12 +1,12 @@
 import { FC } from "react";
-import { Cloud } from "../types";
+import { TNetworkMetrics } from "../types";
 import Card from "./Card";
 import "./cards.css";
 
 interface IProps {
-  cloud: Cloud;
-  domain: Cloud;
-  ip: Cloud;
+  cloud: TNetworkMetrics;
+  domain: TNetworkMetrics;
+  ip: TNetworkMetrics;
 }
 const CardsGrid: FC<IProps> = ({ cloud, domain, ip }) => {
   const data = [

@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import { Cloud, GeneralType } from "../types";
+import { TNetworkMetrics, TGeneralType } from "../types";
 import ArrowLeft from "../svgs/ArrowLeft";
 
 import Earth from "../svgs/Earth";
@@ -9,14 +9,14 @@ import Upload from "../svgs/Upload";
 import NetworkMetrics from "./NetworkMetrics";
 
 interface IProps {
-  card: Cloud;
-  type: GeneralType;
+  card: TNetworkMetrics;
+  type: TGeneralType;
   children: React.ReactNode;
 }
 
 type CardContextType = {
-  card: Cloud;
-  type: GeneralType;
+  card: TNetworkMetrics;
+  type: TGeneralType;
 };
 
 const CardContext = createContext<CardContextType | null>(null);
