@@ -3,9 +3,11 @@ import useFetchData from "../hooks/useFetchData";
 import AssetsTable from "../components/assets-table/AssetsTable";
 import Header from "../components/assets-table/Header";
 import Body from "../components/assets-table/Body";
+import Loading from "../components/shared/Loading";
 
 const Dashboard = () => {
-  const { data } = useFetchData();
+  const { data, isPending } = useFetchData();
+  if (isPending) return <Loading />;
   if (data)
     return (
       <div className="wrapper">

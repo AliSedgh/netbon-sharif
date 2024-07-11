@@ -17,18 +17,18 @@ const useFilteredData = (
   }, [data, type]);
 };
 
-const useFetchData = (): { data: TData | undefined } => {
+const useFetchData = (): { data: TData | undefined; isPending: boolean } => {
   const [searchParams] = useSearchParams();
   const type = searchParams.get("type");
 
-  const { data } = useQuery({
+  const { data, isPending } = useQuery({
     queryKey: ["dashboard"],
     queryFn: fetchDashboardData<TData>,
   });
 
   const filteredData = useFilteredData(data, type);
 
-  return { data: filteredData };
+  return { data: filteredData, isPending };
 };
 
 export default useFetchData;

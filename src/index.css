@@ -37,3 +37,11 @@ html,body{
   padding: 20px;
   color: var(--text-color);
 }
+.is-loading{
+  color: aliceblue;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
