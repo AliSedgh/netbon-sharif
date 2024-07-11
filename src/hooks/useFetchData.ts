@@ -26,8 +26,6 @@ const useFetchData = (): { data: TData | undefined; isPending: boolean } => {
     queryFn: fetchDashboardData<TData>,
   });
 
-  console.log("fffffffffff", data);
-
   const filteredData = useFilteredData(data, type);
 
   return { data: filteredData, isPending };
