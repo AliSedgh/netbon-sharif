@@ -1,18 +1,19 @@
 import { FC } from "react";
-import Chart from "../svgs/Chart";
+import Chart from "./Chart";
 
 interface LiveSectionProps {
   title: string;
   value: number;
+  chartData: number[];
 }
-const LiveSection: FC<LiveSectionProps> = ({ title, value }) => {
+const LiveSection: FC<LiveSectionProps> = ({ title, value, chartData }) => {
   return (
     <div className="live-section">
       <div>
         <span>{title}</span>
         <span>{value}</span>
       </div>
-      <Chart size={100} />
+      <Chart chartData={chartData} />
     </div>
   );
 };

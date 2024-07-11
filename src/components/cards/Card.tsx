@@ -72,8 +72,12 @@ Card.LiveDataDisplay = function CardLiveDataDisplay() {
   const { card } = useCardContext();
   return (
     <div className="live-card-display">
-      <LiveSection title="Live" value={card.total_live} />
-      <LiveSection title="Monitored" value={card.total_monitored} />
+      <LiveSection title="Live" value={card.total_live} chartData={card.live} />
+      <LiveSection
+        title="Monitored"
+        value={card.total_monitored}
+        chartData={card.monitored}
+      />
     </div>
   );
 };
