@@ -1,11 +1,8 @@
 import { createContext, useContext } from "react";
 import { TNetworkMetrics, TGeneralType } from "../../types";
 import ArrowLeft from "../svgs/ArrowLeft";
-
-import Earth from "../svgs/Earth";
 import LiveSection from "./LiveSection";
 import { useSearchParams } from "react-router-dom";
-import Upload from "../svgs/Upload";
 import NetworkMetrics from "./NetworkMetrics";
 import { DetectStyleBaseType } from "../../constants";
 
