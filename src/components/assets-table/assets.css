@@ -70,3 +70,11 @@ thead.assets-table-header tr ,tr.assets-table-header{
       align-items: center;
       color: black;
   }
+
+  .no-assets{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+  }

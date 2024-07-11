@@ -1,6 +1,5 @@
 import { FC } from "react";
 import "./assets.css";
-
 interface AssetsTableProps {
   children: React.ReactNode;
 }
