@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import { TNetworkMetrics, TGeneralType } from "../types";
+import { TNetworkMetrics, TGeneralType } from "../../types";
 import ArrowLeft from "../svgs/ArrowLeft";
 
 import Earth from "../svgs/Earth";

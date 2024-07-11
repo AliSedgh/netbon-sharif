@@ -1,5 +1,5 @@
 import formatUnixTimestamp from "../../utils/formatDate";
-import { TAsset } from "../types";
+import { TAsset } from "../../types";
 
 interface TableRowProps {
   asset: TAsset;

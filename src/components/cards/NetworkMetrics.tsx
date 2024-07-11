@@ -2,7 +2,7 @@ import { FC } from "react";
 import Bug from "../svgs/Bug";
 import Conflicts from "../svgs/Conflicts";
 import Globe from "../svgs/Globe";
-import { TNetworkMetrics } from "../types";
+import { TNetworkMetrics } from "../../types";
 import NetworkMetricsSection from "./networksMetrics/NetworkMetricsSection";
 
 interface NetworkMetricsProps {

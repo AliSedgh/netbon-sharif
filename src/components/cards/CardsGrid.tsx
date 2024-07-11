@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { TNetworkMetrics } from "../types";
+import { TNetworkMetrics } from "../../types";
 import Card from "./Card";
 import "./cards.css";
 

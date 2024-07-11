@@ -1,4 +1,4 @@
-import { TAsset } from "../types";
+import { TAsset } from "../../types";
 import RowContainer from "./RowContainer";
 import TableRow from "./TableRow";
 

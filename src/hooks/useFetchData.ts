@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { TData, TAsset } from "../components/types";
+import { TData, TAsset } from "../types";
 import { useSearchParams } from "react-router-dom";
 import { fetchDashboardData } from "../services/fetchDashboardData";
 import { useMemo } from "react";
