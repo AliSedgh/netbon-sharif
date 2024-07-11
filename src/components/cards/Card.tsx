@@ -7,6 +7,7 @@ import LiveSection from "./LiveSection";
 import { useSearchParams } from "react-router-dom";
 import Upload from "../svgs/Upload";
 import NetworkMetrics from "./NetworkMetrics";
+import { DetectStyleBaseType } from "../../constants";
 
 interface IProps {
   card: TNetworkMetrics;
@@ -27,12 +28,6 @@ const useCardContext = () => {
     throw new Error("useCardContext must be used within a CardProvider");
   }
   return context;
-};
-
-const DetectStyleBaseType = {
-  domain: { style: "domain", text: "Domains", icon: <Earth /> },
-  ip: { style: "ip", text: "Ip Addresses", icon: <Earth /> },
-  cloud: { style: "cloud", text: "Cloud Accounts ", icon: <Upload /> },
 };
 
 function Card({ card, type, children }: IProps) {
